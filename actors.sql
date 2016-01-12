@@ -4,3 +4,9 @@ LOAD DATA LOCAL INFILE ~/data/actors.csv INTO TABLE Actors
 FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"';;
 
 UPDATE Actors SET Movie = TRIM(Movie);
+
+SELECT Name
+FROM Actors
+WHERE Movie = Die Another Day;
+
+DROP TABLE Actors;
